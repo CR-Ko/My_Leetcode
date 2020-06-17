@@ -19,6 +19,17 @@ class AreDistinct{
 		}
 };
 
+// Show that str[k] - 'a' means that a to a is 0, b to a is 1...
+class testStringSubtract{
+	public:
+		static bool tt(const string str){
+			vector<bool> visited(26);
+			int k = 0;
+			cout<<str[k]-'a'<<endl;
+			return true;
+		}
+};
+
 
 class LongestLength{
 	public:
@@ -43,8 +54,10 @@ class LongestLength{
 
 
 int main(int argc, char* argv[]){
-	string str = "geeksforgeeks";
-	cout<< "The input string is: "<< str<<endl;
-	int len = LongestLength::findLengthOfLongestUniqueSubstr(str);
-	cout<<"Len: "<<len<<endl;
+	string str = "aba";
+	//cout<< "The input string is: "<< str<<endl;
+	//int len = LongestLength::findLengthOfLongestUniqueSubstr(str);
+	//cout<<"Len: "<<len<<endl;
+	bool res = AreDistinct::TwoCharAreDistinct(str,0,0);
+	cout<<res<<endl;
 }
