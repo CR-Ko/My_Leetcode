@@ -1,15 +1,26 @@
+import collections
 class Solution(object):
-    def findLongestRepeatingSubstring(self,k,s:
-            ans = 0
-            new = []
-            r = 0
-            l = 0
-            while r < len(s) and l < len(s):
-                 
+    def findLongestRepeatingSubstring(self,k,s):
+            """
+            :type s: str
+            :type k: int
+            :rtype: int 
+            """
+            count = collections.Counter()
+            res = 0
+            start = 0
+            for i, char in enumerate(s):
+                count[char]+=1 
+                maxCnt = count.most_common(1)[0][1]
+                while i - start + 1 - maxCnt > k:
+                    count[s[start]] = count[s[start]] - 1
+                    start += 1
+                res = max(res, i - start +1)
+            return res
 
 
 if __name__ == '__main__':
     sol = Solution()
-    k = 2
-    s = 'ABAB'
+    k = 1
+    s = 'AABABBA'
     print(sol.findLongestRepeatingSubstring(k,s))
