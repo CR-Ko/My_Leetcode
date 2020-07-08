@@ -1,3 +1,9 @@
+"""
+Given a array of positive numbers and a positive number S, find the length of the smallest
+contiguous subarray whose sum is greater than or equal to S. 
+Return 0, if no such subarray exist.
+"""
+
 import numpy 
 
 def smallest_subarray_with_given_sum(s, arr):
@@ -24,7 +30,7 @@ def smallest_subarray_with_given_sum(s, arr):
 
 
 def main():
-    arr = [1,1,1,1,1]
+    arr = [1,2,4,1,1]
     r = smallest_subarray_with_given_sum(7,arr)
     print(r)
 
