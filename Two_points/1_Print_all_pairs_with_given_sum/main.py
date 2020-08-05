@@ -25,6 +25,12 @@ class Solution(object):
                     print('(', arr[i],', ', arr[j], '),', sep="")
         #return
 
+
+class Solution2(object):
+    def printPairs(self, arr, n , sum):
+        print('arr= ', arr)
+
+
 if __name__ == '__main__':
     arr = [1,5,7,-1,5]
     n = len(arr)
