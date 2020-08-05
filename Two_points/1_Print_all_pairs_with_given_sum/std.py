@@ -28,7 +28,7 @@ class Solution(object):
 if __name__ == '__main__':
     arr = [1,5,7,-1,5]
     n = len(arr)
-    sum = 0
+    sum = 8
     sol = Solution()
     sol.printPairs(arr, n, sum)
 
