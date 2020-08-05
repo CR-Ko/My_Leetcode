@@ -23,6 +23,7 @@ class Solution(object):
                 print('i,j = ', i ,j)
                 if(arr[i]+arr[j]==sum):
                     print('(', arr[i],', ', arr[j], '),', sep="")
+        
         #return
 
 if __name__ == '__main__':
